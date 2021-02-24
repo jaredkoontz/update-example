@@ -1,0 +1,38 @@
+[tool.poetry]
+name = "random-project"
+version = "0.0.1"
+description = "some random repo with dependencies"
+authors = [
+    "jared <jkoontz09@gmail.com>"
+]
+license = "MIT"
+
+readme = "README.md"
+
+
+
+
+# Requirements
+[tool.poetry.dependencies]
+python = "^3.6"
+# some random dependencies that should be in dev ¯\_(ツ)_/¯
+pytest = "^5.4.3"
+pytest-cov = "^2.5"
+pytest-mock = "^1.9"
+
+[tool.poetry.scripts]
+poetry = "poetry.console.application:main"
+
+[tool.isort]
+profile = "black"
+force_single_line = true
+atomic = true
+include_trailing_comma = true
+lines_after_imports = 2
+lines_between_types = 1
+use_parentheses = true
+src_paths = ["poetry", "tests"]
+skip_glob = ["*/setup.py"]
+filter_files = true
+known_first_party = "poetry"
+
