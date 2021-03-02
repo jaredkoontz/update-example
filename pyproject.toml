@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "random-project"
-version = "0.0.1"
+version = "0.0.2"
 description = "some random repo with dependencies"
 authors = [
     "jared <jkoontz09@gmail.com>"
@@ -19,6 +19,7 @@ python = "^3.6"
 pytest = "^5.4.3"
 pytest-cov = "^2.5"
 pytest-mock = "^1.9"
+black = { version = "*", allow-prereleases = true }
 
 [tool.poetry.scripts]
 poetry = "poetry.console.application:main"
